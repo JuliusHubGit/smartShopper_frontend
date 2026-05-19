@@ -1,6 +1,6 @@
 # SmartShopper_Frontend
 
-This template should help get you started developing with Vue 3 in Vite.
+Wider empfehlt AXIOS statt AJAX zu nutzen
 
 ## Recommended IDE Setup
 
