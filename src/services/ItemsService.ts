@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const LIST_API_BASE_URL = 'https://smartshopper-frontend.onrender.com/items'
+const LIST_API_BASE_URL = 'https://smarter-shopper-1.onrender.com/items'
 
 class ItemsService {
   getItems() {
