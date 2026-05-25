@@ -11,7 +11,7 @@ interface Item {
 
 const items = ref<Item[]>([])
 const itemName = ref<string>('')
-const baseUrl = history
+const baseUrl = 'https://smartshopper-frontend.onrender.com'
 
 async function getItems(): Promise<void> {
   try {
