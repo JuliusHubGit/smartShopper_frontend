@@ -11,6 +11,7 @@ interface Item {
 
 const items = ref<Item[]>([])
 const itemName = ref<string>('')
+const baseUrl = history
 
 async function getItems(): Promise<void> {
   try {
@@ -31,7 +32,7 @@ async function addItem(): Promise<void> {
 
   try {
     // POST-Request: neues Item zum Server senden
-    await axios.post<Item>('http://localhost:8080/items', { name: itemName.value.trim() })
+    await axios.post<Item>(baseUrl + '/items', { name: itemName.value.trim() })
 
     // Input leeren nach erfolgreichem POST
     itemName.value = ''
