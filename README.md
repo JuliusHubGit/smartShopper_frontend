@@ -2,6 +2,16 @@
 
 Wider empfehlt AXIOS statt AJAX zu nutzen
 
+1. Bootstrap installieren
+npm install bootstrap --save
+
+### Wichtige Commands zum steuern der Vue App:
+Formattiert den Code schön - npm run format
+npm run dev - startet die App im Dev Modus
+npm run build - baut die App für die Produktion
+npm run lint - überprüft den Code auf Fehler
+(npm run test:unit - führt die Unit Tests aus)
+
 ## Recommended IDE Setup
 
 [VS Code](https://code.visualstudio.com/) + [Vue (Official)](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
