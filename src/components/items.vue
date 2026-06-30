@@ -31,8 +31,13 @@ async function addItem(): Promise<void> {
   }
 
   try {
+    const newItem ={
+      id: 0,
+      name: itemName.value.trim(),
+      checked: false
+    }
     // POST-Request: neues Item zum Server senden
-    await axios.post<Item>(baseUrl + '/items', { name: itemName.value.trim() })
+    await axios.post<Item>(baseUrl + '/post/addItem', newItem)
 
     // Input leeren nach erfolgreichem POST
     itemName.value = ''
