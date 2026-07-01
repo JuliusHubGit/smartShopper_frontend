@@ -4,7 +4,9 @@ import ItemsService from '../services/ItemsService'
 import axios from "axios"
 
 interface Item {
-  name: string
+  id?: number,
+  name: string,
+  checked?: boolean
 }
 
 const items = ref<Item[]>([])
@@ -49,7 +51,7 @@ async function addItem(): Promise<void> {
 async function updateItem(item: Item): Promise<void> {
   try {
     // PUT-Request: Item-Status (checked) zum Server senden
-    await ItemsService.updateItem(item.id, item.checked)
+    await ItemsService.updateItem(1, false)
   } catch (err) {
     console.error('Failed to update item', err)
     alert('Fehler beim Aktualisieren des Items')
