@@ -29,7 +29,7 @@ async function addItem(): Promise<void> {
   }
 
   try {
-    const newItem ={
+    const newItem: Item = {
       name: itemName.value.trim()
     }
     // POST-Request: neues Item zum Server senden
