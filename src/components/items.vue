@@ -4,9 +4,7 @@ import ItemsService from '../services/ItemsService'
 import axios from "axios"
 
 interface Item {
-  id: number
   name: string
-  checked: boolean
 }
 
 const items = ref<Item[]>([])
@@ -32,9 +30,7 @@ async function addItem(): Promise<void> {
 
   try {
     const newItem ={
-      id: 0,
-      name: itemName.value.trim(),
-      checked: false
+      name: itemName.value.trim()
     }
     // POST-Request: neues Item zum Server senden
     await axios.post<Item>(baseUrl + '/post/addItem', newItem)
